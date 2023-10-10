@@ -1,0 +1,12 @@
+services:
+  attacker:
+    build:
+      context: .
+      dockerfile: dockerfile
+    volumes:
+      - ./code/:/code:rw
+    environment:
+      - PORT=8080
+    ports:
+      - 8080:8080
+    hostname: swen-lab4-server
